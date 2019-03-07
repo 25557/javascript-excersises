@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+#navbar {
+top: 0;
+z-index: 100;
+position: fixed;
+width: 100%;
+text-align: center;
+}
+
+#navbar li.active {
+  background-color: rgba(0,0,0,0.9);
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(51,51,51,0.9);
+}
+
+#navbar li {
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  zoom:1; /* hasLayout ie7 trigger */
+  list-style:none;
+}
+
+#navbar li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navbar li a:hover {
+  background-color: #111;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 50%, rgba(44,83,100,1) 100%);
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+text-align: center;
+font-family: 'Montserrat', sans-serif;
+padding-top: 100px;
+}
+
+#wrapper a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#wrapper a:hover {
+  text-decoration: none;
+  color: Red;
+}
+
+#validatie {
+text-align: center;
+padding-top: 500px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Mediacollege FRO Javascript Excersises">
+	<meta name="keywords" content="Mediacollege FRO, Javascript Excersises">
+	<meta name="author" content="Tin Xian Hu">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" type="image/png" href="https://tinxian.nl/wp-content/uploads/2018/10/logo-small-retina.png" />
+	<title>Javascript Excersises - Cirkel</title>
+</head>
+
+<body>
+	<div id="navbar">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="rechthoek.html">Rechthoek</a></li>
+			<li class="active"><a href="cirkel.html">Cirkel</a></li>
+			<li><a href="temperatuur.html">Temperatuur</a></li>
+		</ul>
+	</div>
+	<div id="wrapper">
+		<h1>Cirkel:</h1>
+		Straal: <input type="text" id="num1" placeholder="in Centimeters">
+		<br><br>
+		<br><br>
+		<button onclick="calculate()">Bereken </button>
+		<br><br>
+		<p id="uitkomst">De oppervlakte is: </p>
+		<p id="uitkomst1">De omtrek is: </p>
+	</div>
+	<div id="validatie">
+		<a href="http://validator.w3.org/check?uri=referer" target="_blank">
+			<img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+			<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+		</a>
+	</div>
+
+	<script>
+		function calculate() {
+			var pi = Math.PI;
+			var field1 = document.getElementById("num1").value;
+
+			var answer = (pi) * parseFloat(field1) * parseFloat(field1);
+			var answer1 = (2) * (pi) * parseFloat(field1);
+			var answer = (Math.round(answer * 10) / 10);
+			var answer1 = (Math.round(answer1 * 10) / 10);
+
+			if (!isNaN(answer)) {
+				document.getElementById("uitkomst").innerHTML = "De oppervlakte is: " + answer + " cm²";
+			} else {
+				window.alert("Jouw input is incorrect!");
+			}
+
+			if (!isNaN(answer1)) {
+				document.getElementById("uitkomst1").innerHTML = "De omtrek is: " + answer1 + " cm";
+			}
+
+		}
+	</script>
+
+</body>
+
+</html>
